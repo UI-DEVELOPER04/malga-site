@@ -1,0 +1,150 @@
+#footer-gbl{
+	padding: 30px 0px;
+
+	ul{
+		list-style: none;
+	}
+	#logo-footer{
+		float:left;
+		width:250px;
+	}
+	#footer-nav{
+		float:right;
+		width:auto;
+		margin-top:1rem;
+
+		@extend nav;
+
+		ul{
+            width: auto;            
+            float: right;          
+            
+            li {
+                list-style: none;
+                @include margin(0px);
+                display: inline-block;
+                position: relative;                
+                height: auto; 
+                vertical-align: middle;        
+                
+                &:last-child{
+                    margin-left: 0;
+                }
+                a{
+                    display:block;                    
+                    color: $text-color;                    
+                    @include font-size(16px, 16px);                                   
+                    padding: 2*$pad 2*$pad;
+
+                    &.active{
+                        color: $gbltxt-hover; 
+                    }
+                }                                               
+            }
+            li.active a, li a:hover {
+                color: $gbltxt-hover;
+            }
+		} 
+		
+		.cta{
+			padding-left: 10px !important;
+			padding-right:0px !important;
+			border: 0px;
+			color:$primary-color;			
+		}
+	}
+
+	#footer-gbl-footer{
+		margin: 60px 0 0;
+		@include font-size(13px, 16px);
+		text-align: left;
+
+		ul.links{ 
+			float: left;
+			li{
+				margin-right:1em;
+				display: inline-block;
+			}
+			a{
+				color:$red;
+				&:hover,
+				&:focus{
+					color:$red;
+					text-decoration:underline;
+				}
+			}
+		}
+
+		ul.social-media{
+			float:right;
+			margin-top:-1em;
+
+			li{			
+		
+				a{
+					color: $white; background-color:rgba($black, 0.3);					
+					width: 36px; height: 36px; border: 2px solid $grey;
+		
+					.fa, .fab{
+						@include font-size(16, 16); 
+						@include middle; 
+					}
+					img{
+						@include middle; 
+						padding: 4px;
+					}
+		
+					&:hover{
+						text-decoration: none;
+						background-color: $gbltxt-hover;
+					}
+				}            
+			} 
+		}
+	}	
+
+	@include media(900px){
+		text-align: center;
+
+		#logo-footer{
+			float: none;
+    		display: inline-block;
+		}
+		#footer-nav{
+			float:none;
+			margin-top:0px;				
+			ul{				
+				float: none;
+				display: inline-block;          
+				
+				li {					
+					a{
+						@include font-size(14px, 16px);                                   
+						padding: $pad ;						
+					}                                               
+				}				
+			}		
+		}
+	}
+
+	@include media(767px){
+		#footer-gbl-footer{
+			text-align: center;
+			margin-top:30px;
+
+			ul.links{ 
+				float: none;
+				float: none;
+				
+			}
+
+			ul.social-media{
+				float: none;
+				margin: 10px 0 0;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+    

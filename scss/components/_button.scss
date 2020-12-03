@@ -1,0 +1,53 @@
+// Button Stylings for Cookies Noti bar
+
+.cta{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; 
+    position: relative; 
+    outline: none;         
+    cursor: pointer;
+    padding: 3*$pad 6*$pad !important;
+    text-transform: uppercase;    
+    letter-spacing: 1px;
+    margin-right:2*$marg;
+    color: $primary-color;     
+    border:1px solid rgba($red,0.3); 
+    @include font-size(20px, 16px); 
+    @include border-radius(2em);
+
+    &:last-child{
+		margin-right:0;
+	}
+	&:hover,
+	&:focus{
+        border:1px solid rgba($red,1); 
+        outline: none; 
+	}
+}
+
+.grad-cta{    
+    @extend .bg-grad; 
+    color:$white !important;    
+    text-transform: uppercase;
+    
+    line-height: normal;
+
+    &:hover{        
+        color: $white;        
+    }
+}
+
+.txt-cta{
+    color: $primary-color;    
+    display: inline-block;
+    @include font-size(30, 16);
+    font-weight: $bold;
+
+    &:hover{
+        text-decoration: none;
+        color:$black;
+    }
+}
+ 
+

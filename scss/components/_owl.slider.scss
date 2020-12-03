@@ -1,0 +1,68 @@
+// OWL THEME NAV
+.owl-theme{
+    .owl-nav{
+        width:100%;
+        margin: 0px;
+
+        button {
+            &.owl-prev, &.owl-next{
+                background-color: rgba(0, 0, 0, .6);
+                width: 60px;
+                height: 100%;
+                position: absolute;   
+                top:0px;             
+                margin: 0px;
+                @include border-radius(0px);
+                z-index: 99;
+
+                &:before{
+                    @include AwesomePro;                
+                    @include middle;
+                    @include font-size(100px, 16px);
+                    color:$white;
+                    font-weight: 300; 
+                }
+
+                span {
+                    display:none;
+                }
+            }
+            &:focus {
+                outline: 0;
+                outline: 0;
+            }
+
+            &.owl-prev{
+                left:0px; 
+                
+                &:before{
+                    content: "\f104";                        
+                }
+            }
+            &.owl-next{
+                right:0px;  
+                &:before{
+                    content: "\f105";                        
+                }             
+            }
+
+            @include media(767px){ 
+                &.owl-prev, &.owl-next{                        
+                    width: 50px; 
+                    height:80px;  
+                    top:50%;
+                    margin-top:-40px;    
+
+                    &:before{                            
+                        @include font-size(65px, 16px);                            
+                    }                        
+                }
+            }
+        }  
+        
+        [class*='owl-']:hover {
+            background-color: rgba(0, 0, 0, .6);
+        }
+    }
+}
+

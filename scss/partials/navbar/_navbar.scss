@@ -1,0 +1,164 @@
+header.siteHeader{
+    >.inner{position: relative;}
+
+    // GLOBAL NAVIGATION
+    nav.nav{           
+        font-family: $bariol;  
+        clear: both;
+        display: block;
+        @include selfClearing;
+
+        a{
+            text-decoration: none; 
+            display: inline-block;
+        }
+
+        ul{
+            width: auto;            
+            float: right;          
+            
+            li {
+                list-style: none;
+                @include margin(0px);
+                display: inline-block;
+                position: relative;                
+                height: auto; 
+                vertical-align: middle;        
+                
+                &:last-child{
+                    margin-left: 4*$marg;
+                }
+                a{
+                    display:block;                    
+                    color: $text-color;                    
+                    @include font-size(20px, 16px);                                   
+                    padding: 2*$pad 2*$pad;
+
+                    &.active{
+                        color: $gbltxt-hover; 
+                    }
+                }                
+                &:hover .childMenu{
+                    visibility: visible;
+                    opacity: 1;
+                    @include translateY(0px);
+                }
+                &:hover > a{
+                    color: $gbltxt-hover; 
+                }                               
+            }
+
+            li.active a, li a:hover {
+                color: $gbltxt-hover;
+            }
+        } 
+        
+        @include media(1080px) {
+            ul{
+                margin-right: 10*$marg;
+
+                li{
+                    a{
+                        display: none;
+
+                        &.grad-cta{
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include media(621px) {
+            display: none;
+        }
+    }    
+}
+
+
+// Mobile Menu specific styles
+header.siteHeader {
+    .toggle{        
+        width: auto;          
+        cursor: pointer;        
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -12px;
+        z-index: 2;
+    }
+    
+    @media screen and (min-width: 1080px) {
+        .toggle{
+            display: none;
+        }
+
+    }
+}
+
+$bar-width: 32px;
+$bar-height: 3px;
+$bar-spacing: 10px;
+$bar-color: $primary-color;
+
+.hamburger-menu {
+    margin: auto;
+    width: $bar-width;
+    height: $bar-height + $bar-spacing*2;
+    cursor: pointer;
+    float: right;
+    
+    .bar,
+    .bar:after,
+    .bar:before {
+        width: $bar-width;
+        height: $bar-height;
+    }
+
+    .bar {
+        position: relative;
+        transform: translateY($bar-spacing);
+        background: $primary-color;
+        transition: all 0ms 300ms;
+    
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: $bar-spacing;
+            background: $primary-color;
+            transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+
+            
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: $bar-spacing;
+            background: $primary-color;
+            transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);            
+        }
+    }
+
+    .mm-opening & .bar {
+        background: rgba(255, 255, 255, 0); 
+    }
+
+    .mm-opening & .bar::after {
+        top: 0;
+        transform: rotate(45deg);
+        transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+    }
+
+    .mm-opening & .bar::before {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+    }
+}
+
+
+
+

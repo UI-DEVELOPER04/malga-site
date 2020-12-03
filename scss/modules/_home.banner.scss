@@ -1,0 +1,58 @@
+.home-banner {    
+    padding: 120px 0px 140px !important;
+
+    main{        
+        text-align: center;        
+        
+        h1{        
+            strong{        
+                display: block;
+                color:$primary-color; 
+            }  
+        }
+    }
+
+    .hero-right {
+        width: 100%;        
+        
+        .bg {
+            @include middle;
+            width: 85%;
+            top:58%;
+            height: auto;
+            z-index: 0;
+        }
+
+        .img {
+            @include horizontal-align;
+            width: 73%;
+            top: 8.5%;
+            left: 50%;
+            z-index: 2;
+            background: #000;
+            overflow: hidden;
+        }
+    }
+
+    @include media(767px){
+        padding: 120px 0px 10% !important;
+
+        .hero-right {
+            margin-top:10%;
+        }
+    }
+}
+
+#home-hero{        
+    top:0px;    
+}
+
+
+    
+
+
+
+
+
+
+

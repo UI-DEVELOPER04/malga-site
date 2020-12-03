@@ -1,0 +1,222 @@
+.mobile-nav {
+    .mm-panels {
+        .mm-panel{
+            width: 100%;        
+        }
+        .mm-subopened + .mm-opened{
+            &:before {
+                height: 30px;
+            }
+
+            .mm-listview{
+                padding: 20px 0px;                
+            }
+        }
+    }
+}
+/*.mm-menu{background: $white;}*/
+
+.mm-listview{
+  li {
+    color: $white; 
+    font-weight: $regular; 
+    @include font-size(18, 16);
+    text-align: left;
+    a{
+        @include padding(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+        @include font-size(18, 16);
+    }
+    &.active{
+        a{
+            color: $white;
+        }
+    }    
+  }
+}
+/*.mm-menu .mm-listview>li.mm-selected>a:not(.mm-next), 
+.mm-menu .mm-listview>li.mm-selected>span {
+    background: transparent;
+    color: $black;
+}
+.mob-nav{
+    display: none !important;
+
+    @include media(992px){
+        display: block !important;
+    }
+}*/
+
+// Mobile Navigation
+.mobile-nav{
+    background-color: $black;
+    color: $white;
+
+    .mm-panel.mm-hasnavbar .mm-navbar{display: none;}
+    .mm-panels>.mm-panel.mm-hasnavbar{padding-top: 0;}
+
+    .mm-panels>.mm-panel{
+        @include padding(0px);
+    }
+    
+    ul{
+        line-height: 1.3em;
+        &.mm-listview{
+            @include margin(0px);
+        }
+
+        &,li{
+            width: 100%;
+            color: $white;
+        }
+
+        li:after{display: none;}        
+        
+        li a{
+            padding: 20px;
+            display: block;
+            font-size: 18px;
+            color: $white;
+            font-weight: $regular;
+            text-decoration: none;            
+
+            .fa-home{font-size: 24px;}          
+        }
+
+        .emphasis{background: none;}
+    }
+
+    ul.sub-menu li a{
+        color: lighten($black, 25%);
+    }
+
+    .mm-menu .mm-btn:after {
+        &.mm-menu .mm-btn:before{
+            border-color: rgba(255,255,255,1);
+        }
+    }   
+}
+
+// Add New Feature Mobile Navigation css
+
+.mm-navbar{
+    .mm-btn{
+        width: 50px;
+        font-size: 18px; 
+
+        &:last-child{
+            text-align: left; right: 10px; top: 50%;
+            @include vertical-align;
+        }
+    }
+
+    &.mm-hasbtns {
+        padding: 0 20px;
+    }
+}
+.mm-navbars-top {
+    border-bottom-width: 0px;
+    @include padding-all(10px, 0px, 10px, 0px);
+    background-color: $black;
+}
+.mm-sronly {
+    clip: inherit !important;
+    -webkit-clip-path: inherit !important;
+    overflow: inherit !important;  
+    text-transform: uppercase;     
+    text-indent: -99999px;
+}
+
+.mm-menu.mm-theme-black{
+    background:$gbltxt-hover;
+    .mm-btn{
+        &:after{
+            border-color: rgba(255,255,255,1);
+        }
+        &:before{
+            border-color: rgba(255,255,255,1);
+        }
+    }
+}
+
+.mm-clear{
+    &:after{
+        width: 12px; height: 10px; right: 18px; top: -2px;        
+    }
+    &:before{
+        width: 10px; height: 10px; right: 6px; top: -2px;
+    }
+}
+.mm-close{
+    &:after{
+        width: 14px; height: 14px; right: 18px; top: -2px;       
+    }
+    &:before{
+        width: 14px; height: 14px; right: 0px; top: -2px;
+    }
+}
+.mob-logo{
+    float: left; padding: 20px 0;
+
+    img{
+        max-width: 80px;
+    }
+}
+.mm-menu{
+    &.mm-theme-black{
+        .mm-navbar{
+            a{
+                color: $white;
+                @include font-size(20, 16);
+                font-weight: $medium;                
+            }
+            >*{
+                color: $white;
+            }
+        }
+        .mm-listview{
+            background: $trans;
+            @include box-shadow(0 6px 30px -10px rgba(#000, 0));
+            width: 100%;
+    
+            li{
+                a{
+                    padding:15px !important;
+
+                    &.grad-cta{
+                        background:$trans;
+                        text-align: left;
+                        border:0px;
+                    }                    
+    
+                    &:hover{
+                        background: rgba(255,255,255,0) !important;
+                        color:$white !important;
+                    }              
+                }    
+                &:last-child{
+                    a{
+                        padding-bottom: 15px !important;                
+                    }
+                }
+                .border-cta{
+                    border-color: $white;
+                    margin: 20px 15px;
+                }
+            }
+        }
+    }
+}
+.mm-panels{
+    .mm-panel{
+        .mm-navbar{margin-top: 0px;}
+        .mm-listview{margin: 20px 0px;}
+    }
+}
+
+.mm-panels>.mm-panel>.mm-navbar+.mm-listview{margin-top: 0px;}
+
+
+
+
+

@@ -1,0 +1,87 @@
+.faqs{
+    padding-bottom:25% !important;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        padding-top: 25%;
+        background: url(../images/malga-bg-fade.png) bottom left no-repeat;
+        background-size: 100% auto;        
+        z-index: 0;
+    }
+
+    .inner{
+        margin-bottom:6*$marg;
+
+        header{
+            h2{
+                color:$white; 
+            }
+        }
+
+        main{
+            .collapse-list{	
+                float:none;
+                max-width:960px;
+                margin:0 auto; 
+                color:$white;               
+            
+                dt{		
+                    font-size:1.5em;
+                    font-weight:normal;
+                    padding:1rem 0;
+                    border-top:1px solid rgba($white,0.5);
+                    
+                    @include font-size(20px, 16px); 
+
+                    &:first-child{
+                        border-top:0;
+                        margin-top:0;
+                    }
+                }
+                dt{
+                    cursor:pointer;                    
+                    @extend .fa-angle-down;
+
+                    &::before{
+                        @extend .fal;
+                        position:absolute;
+                        top:17px;
+                        right:0;			
+                        text-align:right;
+                        @include font-size(30px, 16px);
+            
+                    }
+                    &.open{
+                        @extend .fa-angle-up;
+                    }
+                }
+                dd{
+                    margin:0;		
+                    width:100%;
+                    padding-bottom: 6*$pad;
+                }
+            }
+        }
+        
+    }     
+
+    @include media(992px){
+        
+    }
+}
+
+
+
+    
+
+
+
+
+
+
+

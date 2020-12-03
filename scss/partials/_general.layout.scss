@@ -1,0 +1,55 @@
+// Fixed Background Images
+.fixed-bg{
+    @include bgCover;
+    background-attachment: fixed;
+    position: relative;    
+}
+
+// Fixed Background Images
+.full-bg{
+    @include bgCover;    
+    position: relative;
+}
+
+.intro-block{
+    position: relative;
+    @include selfClearing;
+    text-align: center; 
+}
+
+
+.head-block{
+    position: relative;
+    @include selfClearing;  
+    text-align: center;  
+    
+    h3{
+        position: relative;
+        border-bottom:1px solid $b;
+        display: inline-block;
+        padding-bottom: 10px;
+
+        &:after{
+            width:50%; 
+            height: 3px;
+            background-color:$secondary-color;
+            content: ''; bottom: -2px;
+            @include horizontal-align;
+        }
+    }
+
+    @include media(767px){
+        h1{
+            @include font-size(30, 16);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+
+// Social Media Block
+
+.social-media{
+    @include padding(0px);
+    @include margin(0px);
+    list-style: none;        
+
+    li{ 
+        float: left;
+        list-style-type: none;
+        margin-right: 10px;
+
+        &:lasr-child{margin-right: 0px;}
+
+        a{
+            color: $white;                
+            @include padding-all(10px, null, 10px, null);
+            display: block; text-align: center; position: relative;
+            width: 30px; height: 30px; border-radius: 100%; border: 2px solid $white;
+
+            .fa, .fab{
+                @include font-size(16, 16); 
+                @include middle; 
+            }
+            img{
+                @include middle; 
+                padding: 4px;
+            }
+
+            &:hover{
+                text-decoration: none;
+                background-color: $gbltxt-hover;
+            }
+        }            
+    }    
+}

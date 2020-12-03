@@ -1,0 +1,149 @@
+//===================================================================//
+// =====================  BASE VARIABLES   ======================== //
+//=================================================================//
+
+
+// Dimensions & Grid
+// --------------------------------
+$desktop: 1180px;
+$tablet: 960px - 1px;
+$mobile: 780px - 1px;
+$columns: (100% / 12);
+$dmargin: 20px / $desktop * 100%;
+$mmargin: 10px / $mobile * 100%;
+$oneThird:(100/3)*1%;
+$twoThird:(100/3)*2%;
+
+$max: 1920px;
+$mw: 1300px;
+$th: 1000px;
+$cw: 900px;
+$sw: 700px;
+$section: 40px;
+$sectionlarge: 60px;
+$unit: (1/12)*100%;
+
+// Variables Declaration
+// --------------------------------
+$bariol: 'bariol', arial, cursive, sans-serif;
+$open-sans: 'Open Sans', arial, cursive, sans-serif;
+$lato: 'Lato', sans-serif;
+$myriad-pro: 'Myriad Pro Regular';
+
+$gbltxt-hover: #E83D61;
+$primary-color: #E83D61;
+$secondary-color: #4B267F;
+$text-color: #1D252D;
+
+$pad :5px;
+$marg :5px;
+
+// FONT SIZES
+// --------------------------------
+$body: 16px;
+$bodyMobile: 14px;
+
+$llargText:  24px;
+$largText:   20px;
+$mediumText: 18px;
+$smallText:  14px;
+$ssmallText: 12px;
+
+// FONT SPACING
+// --------------------------------
+$font-space1: 1px;
+$font-space2: 2px;
+$font-space3: 3px;
+$font-space-normal: normal;
+
+// FONT-WEIGHT - $MAIN
+// --------------------------------
+$slight: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$sum-medium: 600;
+$bold: 700;
+$strong: 700;
+$weightBlack: 900;
+
+// Base Colours
+// --------------------------------
+$trans: transparent;
+$ddgrey: #454545;
+$dgrey:  #9a9a9a;
+$grey:  #f5f5f5;
+
+$red: #E83D61; 
+$blue: #4B267F;
+
+// Fx
+// --------------------------------
+$shadow:0px 0px 5px 0px #333;  // Global Box Shadow Style (if applicable)
+$headShad:0px 0px 10px $grey;
+$headGrey:0px 0px 10px rgba($dgrey, 0.4);
+
+
+// BASE COLOR SET
+// --------------------------------
+$bg: #f0f0f0;
+$charc: #333;
+$slate: #424242;
+$chalk: #fdfdfd;
+$trans: rgba(#FFFFFF, 0);
+$white: #fff;
+$black: #000;
+$w: #fff;
+$b: #000;
+$creme: #fdf7f1;
+$ddgrey: #444;
+$dgrey: #666;
+$mgrey: #8a8a8a;
+$lmgrey: #ddd;
+$lgrey: #cfcfcf;
+$slgrey: #fafafa;
+$rad: #C81E26;
+$fb: #3b5998;
+$tw: #288EC3;
+$gplus: #dd4b39;
+$yt: #bb0000;
+$vine: #00bf8f;
+$li: #007bb6;
+$inst: #517fa4;
+$pnt: #cb2027;
+$tumblr: #35465c;
+$radNja: #ff5225;
+$radPnk: #db1561;
+$rss: $radNja;
+$linkedin: $li;
+$snapchat: #fffc00;
+$vk: #4c75a3;
+$weibo: #df2029;
+$weixin: #10D21C;
+
+// SOCIAL ICONS
+// --------------------------------
+$social: (
+	'twitter': $tw, 
+	'facebook': $fb, 
+	'pinterest': $pnt, 
+	'youtube': $yt, 
+	'linkedin': $li,
+	'linkedin-in': $li, 
+	'instagram': $inst,
+	'google-plus': $gplus,
+	'vk': $vk,
+	'weixin': $weixin,
+	'weibo': $weibo,
+	'envelope': $black,
+);
+
+//  BREAK POINTS
+//---------------------------------
+$menu-break: 1110px;
+$duelColumnBreak: 860px;
+$gridBlocksBreak: 767px;
+$gridBlocksBreak__mobile: 550px;
+
+
+

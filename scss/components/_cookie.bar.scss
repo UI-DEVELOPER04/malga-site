@@ -1,0 +1,40 @@
+// Cookie bar widget
+#cookieBar{
+    @include transitions(opacity .3s, max-height .3s);
+    background-color: $ddgrey;
+    color: $w;
+    text-align: center;
+    font-size: 0.71em;
+    z-index: 9999;
+    letter-spacing: 0.02em;
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    position: relative;
+    
+    .inner{border: 0;}
+    
+    p,a{
+        color: rgba($w, 20%);
+        display: inline-block;
+        margin: 0;
+    }
+
+    P{margin-right: 15px;}
+
+    a{ 
+        margin: 0 5px;
+
+        &:hover{
+            text-decoration: none;
+            color: $gbltxt-hover;
+        }
+    }
+    a.accept{color: $w;}    
+
+    &.visible{
+        padding: 10px;
+        max-height: 100px;
+        opacity: 1;
+    }
+}

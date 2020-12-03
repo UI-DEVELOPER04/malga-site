@@ -1,0 +1,388 @@
+// short-services Style
+.short-services{
+    @include selfClearing;
+    text-align: center;  
+    position: relative;
+    padding:40px 0;
+    background-color:#efeeee;
+
+    &:before{
+        background:url(../images/banner-border.png) bottom center no-repeat;
+        content: ''; position: absolute; left:0px; top: -30px;
+        width:100%; height: 30px; z-index: 1;
+    }
+    
+    .boxs{
+        background-color:$w;
+        border:1px solid #e5e3e3;
+        padding:8px;
+        display: table;
+        width: 100%;
+        margin:10px 0;
+        .box{
+            border:1px solid #e5e3e3;
+            height: 100px;
+            display: table-cell;
+            vertical-align: middle;
+
+            img{
+                margin-right:10px;
+            }
+            span{
+                text-transform: uppercase;
+                font-weight: $bold;
+                @include font-size(22, 16);
+            }
+        }
+    }
+}
+
+// ABOUT BLOCK
+.about-block{
+    @include selfClearing;  
+    padding:50px 0;
+}
+
+// PROTFOLIO BLOCK
+.our-portfolio{ 
+    padding:50px 0;    
+
+    .head-block{
+        h3 {            
+            margin-bottom: 40px;
+        }
+    }
+
+    .owl-carousel{
+        .owl-item{
+            .item{
+                margin-bottom: 0px;
+                position: relative;
+                //overflow: hidden;
+                //border:1px solid $grey;
+                box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+        .owl-video-wrapper {
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .owl-video-play-icon{
+            background-color: rgba(0, 0, 0, .8);
+            @include border-radius(50%);
+        }
+    }   
+    
+    .imgBlock{
+        position: relative;
+        overflow: hidden;
+        //border: 6px solid rgba(#000, 0.2);
+        //@include box-shadow(0 6px 30px -10px rgba(#000, 0.4) );
+
+        .block{
+            background: rgba(0, 0, 0, .5);
+            @include transition-all(.5s);
+            position: absolute;                
+            left: 50%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            opacity: 0;                
+            text-align: center;            
+
+            .link{
+                color: $white;   
+                @include transition-all(.5s);
+                @include font-size(24px, 16px);
+                @include middle; 
+                border:2px solid $white;
+                width:50px; height:50px;
+                line-height:46px;
+                border-radius: 50%;
+                opacity: 0;           
+
+                &:hover{
+                    color: $secondary-color;
+                    border:2px solid $secondary-color;
+                }
+            }
+        }
+
+        &:hover{
+            .block{                    
+                top: 0;
+                left: 0;
+                opacity: 1;
+                width: 100%;
+                height: 100%;
+
+                .link{
+                    opacity: 1;
+                }
+                                  
+
+                .cs-details{
+                    opacity: 1;                      
+                }                     
+            }
+        }                  
+    }
+}
+
+// SERVICES BLOCK
+.services-block{
+    @include selfClearing;  
+    padding:60px 0 40px;
+
+    h4{
+        margin-bottom:40px;
+    }
+
+    .blocks{
+        background-color:$secondary-color;        
+        text-align: center;        
+        position: relative;
+        margin:30px 0;
+
+        &:before{
+            width:94%; 
+            height: 10px;
+            background-color:$lgrey;
+            content: ''; top: -10px;
+            @include horizontal-align;
+        }
+        &:after{
+            width:84%; 
+            height: 10px;
+            background-color:#cecece;
+            content: ''; top: -20px;
+            @include horizontal-align;
+        }
+        .block{
+            padding:30px;
+            height: 100%;
+            @include font-size(24, 16);
+            min-height: 200px;
+
+            img{
+                display: inline-block;
+                margin-bottom: 10px;
+                max-height: 70px; 
+            }
+            aside{
+                display: block;
+                max-width: 200px;
+                text-align: center;
+                line-height: 30px;
+                font-weight: $sum-medium;
+                margin:auto;
+                color:$white;
+            }
+        }
+    }
+}
+
+// OUR Clients
+.our-clients{
+    @include selfClearing;
+    padding:50px 0;
+    background-color:$lgrey;
+
+    .intro-block{
+        padding-bottom:20px;
+    }
+
+    .client-logo{
+        .owl-item {
+            .item {
+                margin-bottom:0px;
+                img{
+                    filter: gray; /* IE6-9 */
+                    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+                    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+
+                    &:hover {
+                        -webkit-filter: grayscale(0);
+                        filter: none;
+                    }
+                }
+            }
+        }
+        &.owl-theme{
+            .owl-nav{    
+                button {
+                    &.owl-prev, &.owl-next{                        
+                        width: 40px;
+                        height: 40px;                        
+                        @include border-radius(50%);
+                        @include vertical-align;
+    
+                        &:before{
+                            @include font-size(40px, 16px);                            
+                        }    
+                        span {
+                            display:none;
+                        }
+                    }                                     
+                }           
+            }
+        }
+    }
+}
+
+// QUICK ENQUIRY BLOCK
+.quick-enquiry{
+    @include selfClearing;  
+    padding:50px 0;
+
+    .form-group{
+        .form-control{
+            @include border-radius(0);
+            background-color: $lgrey;
+            border: 0px;
+            border-bottom: 4px solid #cecece;
+            transition: all .3s ease-out;
+            color: $b; 
+
+            &:focus {                
+                box-shadow: inherit;
+            }            
+            &.error {
+                border: 0px;
+                border-bottom: 4px solid #f70017;                
+            }
+        }        
+        label.error {
+            display: none !important;
+        }
+    }
+}
+
+// Testimonial Slider Style
+.testimonialBlock{
+    @include padding-all(25px, 0, 40px, 0);
+    @include selfClearing;
+    margin-top:50px;
+    border:1px solid $grey;
+    border-width:1px 0;
+    //background-color:$lgrey;
+
+    .testimonials{
+        //border-right: 1px solid $w;
+        padding-right: 50px;
+        text-align: center;        
+
+        .info{      
+            display: block;               
+        }
+        .client-say{
+            @include selfClearing;
+            position: relarive;  
+            @include padding-all(20px, 0px, 20px, 0px);         
+            
+            h5{
+                margin-bottom: 0px;
+            } 
+            p{
+                margin-bottom: 0px;
+            } 
+        }
+        .single-sliderRow{
+            .single-slider-cell{
+                padding-bottom: 15px;
+            }
+        }
+
+        .flickity-page-dots{
+            display: none;
+        }
+
+        .flickity-prev-next-button{            
+            top: inherit;
+            bottom: -43px;
+            background: $trans;
+
+            @include media(992px){
+                bottom: inherit;
+                top: -60px !important;
+            }
+            @include media(768px){
+                display: none;
+            }
+
+            svg{
+                display: none;
+            }
+
+            &.flickity-prev-next-button.previous {
+                left: inherit;
+                right: 32px;
+                background-color: $trans;
+
+                &:after{
+                    content: "\f104"; font-family: 'FontAwesome';
+                    position: absolute;
+                    @include middle;                    
+                    @include font-size(18, 16); 
+                    width: 28px;
+                    height: 28px;
+                    line-height: 28px;
+                    @include border-radius(100%);
+                    color: $secondary-color; 
+                    background-color: $primary-color;                     
+                }
+            }
+
+            &.flickity-prev-next-button.next{
+                right: 0px;
+                background-color: $trans;
+
+                &:after{
+                    content: "\f105"; font-family: 'FontAwesome';
+                    position: absolute;
+                    @include middle;                    
+                    @include font-size(18, 16); 
+                    width: 28px;
+                    height: 28px;
+                    line-height: 28px;
+                    @include border-radius(100%);
+                    color: $secondary-color; 
+                    background-color: $primary-color;                     
+                }
+            }             
+        }
+
+        @include media(992px){
+            //border-right: 0;
+            //padding-right: 15px;
+              
+
+            .single-slider-cell{
+                //border-bottom: 1px solid $w;
+            }   
+        }
+
+        .flickity-prev-next-button:disabled {
+            opacity: 0 ;
+        }
+        .flickity-prev-next-button:disabled {
+            opacity: 0 ;
+        }
+    }
+
+    .title-info{
+
+        h3 {
+            color: $primary-color;
+            text-transform: uppercase;            
+        }
+        h2 {
+            color: $text-color;       
+        }        
+    }    
+}
+
+
+
+
+
+

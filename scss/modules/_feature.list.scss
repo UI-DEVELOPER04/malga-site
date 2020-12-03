@@ -1,0 +1,122 @@
+.feature-list { 
+
+    h2{
+        padding-left: 10*$pad;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 0 3*$pad 0 -12*$pad;           
+            vertical-align: middle;
+            background: url(../images/malga-icon.svg) no-repeat;            
+            background-size: 100%;
+        }
+    }
+
+    .feature-list-feature main, 
+    .feature-list-feature aside{
+        width: 50%;
+        position: sticky;
+        top: 111px;
+        float: left;
+    }
+       
+    .feature-list-feature{
+        margin-bottom: 12*$pad;
+
+        main{
+            padding: 12*$pad;
+        }
+        &:nth-child(odd) main{
+            float: right;
+        }
+        .feature-showcase[class*=align-] {
+            padding: 12*$pad 24*$pad;
+        }
+
+        .feature-showcase{  
+            .feature {
+                position: absolute; 
+                width: 50%;
+                z-index: 1;
+                top: 0;
+                right: 0;
+            }
+            .img{
+                @include border-radius(20px);
+            }
+
+            &.align-bottom-right {
+                padding-left: 0;
+                padding-top: 0;
+
+                .feature {
+                    top: auto;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+            &.align-top-right {
+                padding-left: 0;
+                padding-bottom: 0;
+
+                .feature {
+                    top: 0;
+                    right: 0;
+                }
+            }
+            &>.feature {
+                opacity: 0;
+                -webkit-transform: translateY(60px);
+                -moz-transform: translateY(60px);
+                -ms-transform: translateY(60px);
+                -o-transform: translateY(60px);
+                transform: translateY(60px);
+            }
+            &.active>.feature {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+                @include transition-all(.6s);                
+            } 
+        }
+    }    
+
+    @include media(992px){
+        h2{
+            padding-left: 10*$pad;
+    
+            &:before {
+                margin-left:-10*$pad;                
+            }
+        }
+
+        .feature-list-feature main, 
+        .feature-list-feature aside{
+            width: 100%;
+            position: relative;
+            top: 0;
+        }
+
+        .feature-list-feature{
+            main{
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+
+    
+
+
+
+
+
+
+

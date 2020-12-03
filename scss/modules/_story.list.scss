@@ -1,0 +1,66 @@
+.story-list{ 
+
+    .inner{
+        header{
+            p{
+                @include font-size(20px, 16px);
+
+                &:last-child{
+                    margin-bottom:0px;
+                }
+            }
+        }        
+
+        .block-story{
+            margin: 3*$marg 0;
+            
+            header {
+                padding: 6*$pad;
+
+                .headshot {
+                    width: 100px;
+                    height: 100px;
+                    @include border-radius(50%);
+                    float: left;
+                    overflow: hidden;
+                    margin-right: 30px;
+                }
+                strong {
+                    color: $text-color;
+                    font-family: bariol;
+                    @include font-size(20px, 16px);
+                    display: block;;
+                    margin-top: 4*$marg;
+                }
+                span {
+                    display: block;
+                }
+            } 
+            main {
+                padding: 0 6*$pad 6*$pad; 
+
+                p{    
+                    &:last-child{
+                        margin-bottom:0px;
+                    }
+                }
+            }               
+        }
+    }
+
+     
+
+    @include media(992px){
+        
+    }
+}
+
+
+    
+
+
+
+
+
+
+
