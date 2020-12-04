@@ -1,0 +1,37 @@
+.page-header{    
+    @extend .bg-grad; 
+    padding: 80px 0px 120px !important;
+    text-align: center;
+
+    h1{
+        color:$white;        
+    }
+
+    & + .page-hero{
+        &.gbl {
+            margin-top: -140px;
+            z-index:1;
+        }
+    }
+}
+
+.page-hero{
+    &.gbl{
+        & + .gbl {
+            padding-top: 140px;
+            margin-top: -140px;
+            z-index: 0;
+        }
+    }
+}
+
+
+
+    
+
+
+
+
+
+
+

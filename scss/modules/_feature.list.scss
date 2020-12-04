@@ -1,37 +1,41 @@
-.feature-list { 
+.feature-list,
+.feature-multi-list { 
 
-    h2{
-        padding-left: 10*$pad;
-
-        &:before {
-            content: "";
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            margin: 0 3*$pad 0 -12*$pad;           
-            vertical-align: middle;
-            background: url(../images/malga-icon.svg) no-repeat;            
-            background-size: 100%;
+    header{
+        h2{
+            padding-left: 0;
+            @include font-size(50px, 16px); 
+    
+            &:before {
+                display: none;
+            }
         }
     }
 
     .feature-list-feature main, 
-    .feature-list-feature aside{
+    .feature-list-feature aside,
+    .multi-feature-list-feature main, 
+    .multi-feature-list-feature aside{
         width: 50%;
         position: sticky;
         top: 111px;
         float: left;
     }
-       
-    .feature-list-feature{
-        margin-bottom: 12*$pad;
 
+    .feature-list-feature, 
+    .multi-feature-list-feature{
+        margin-bottom: 12*$pad;
+    }
+
+    .feature-list-feature, 
+    .multi-feature-list-feature{
         main{
             padding: 12*$pad;
         }
         &:nth-child(odd) main{
             float: right;
         }
+        
         .feature-showcase[class*=align-] {
             padding: 12*$pad 24*$pad;
         }
@@ -48,6 +52,14 @@
                 @include border-radius(20px);
             }
 
+            &.align-top-right {
+                padding-left: 0;
+                padding-bottom: 0;
+                .feature {
+                    top: 0;
+                    right: 0;
+                }
+            }
             &.align-bottom-right {
                 padding-left: 0;
                 padding-top: 0;
@@ -58,15 +70,25 @@
                     right: 0;
                 }
             }
-            &.align-top-right {
-                padding-left: 0;
-                padding-bottom: 0;
 
+            &.align-top-left {
+                padding-right: 0;
+                padding-bottom: 0;
                 .feature {
                     top: 0;
-                    right: 0;
+                    left: 0;
                 }
             }
+            &.align-bottom-left {
+                padding-right: 0;
+                padding-top: 0;
+                .feature {
+                    top: auto;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            
             &>.feature {
                 opacity: 0;
                 -webkit-transform: translateY(60px);
@@ -97,19 +119,25 @@
         }
 
         .feature-list-feature main, 
-        .feature-list-feature aside{
+        .feature-list-feature aside,
+        .multi-feature-list-feature main, 
+        .multi-feature-list-feature aside{
             width: 100%;
             position: relative;
             top: 0;
         }
 
-        .feature-list-feature{
+        .feature-list-feature,
+        .multi-feature-list-feature{
             main{
                 padding-left: 0;
             }
         }
     }
 }
+
+
+
 
 
     

@@ -27,6 +27,7 @@ html.mm-blocking{
     overflow: visible;
 }
 
+
 body, html, header, footer, 
 section, article, main, nav, aside {    
     width:100%;
@@ -49,7 +50,7 @@ img{
 a:focus {
     outline: none;
 }
-html, body {    
+body {    
     @include font-size(16px, 16px);
     font-family: $open-sans;    
     font-weight: $regular;
@@ -108,12 +109,7 @@ a{
         text-align: center;
     }
 }
-[class*=block-] {
-    background: #fff;
-    @include border-radius(20px);
-    @include box-shadow(0 0px 10px 0px rgba(34, 34, 34, 0.2));
-    overflow: hidden;    
-}
+
 figure {
     margin: 0;
 }
@@ -149,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $bariol;  
     font-weight: $regular;
     color: $text-color;
-    @include margin-all(0, 0, 20px, 0); 
+    margin: 0 0 4*$marg 0;
     @include padding(0px);
     position: relative;
     line-height: normal;
@@ -160,12 +156,27 @@ h1{
 }
 h2{
     @include font-size(40px, 16px); 
+    padding-left: 10*$pad;
+    line-height: 1.1;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: -2*$marg 3*$marg 0 -10*$marg;           
+        vertical-align: middle;
+        background: url(../images/malga-icon.svg) no-repeat;            
+        background-size: 100%;
+    }
 }
 h3{
-    @include font-size(30px, 16px); 
+    @include font-size(34px, 16px); 
 }
 h4{
     @include font-size(24px, 16px); 
+    color:$primary-color;
+    margin: 5*$marg 0 2*$marg;
 }
 h5{
     @include font-size(18px, 16px); 

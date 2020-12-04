@@ -17,13 +17,13 @@
             </div>
             <nav class="nav" id="mainNav">
                 <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="platform.php">Platform</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="article-list.php">Resources</a></li>
-                    <li><a href="story-list.php">Customer Stories</a></li>
-                    <li><a href="article-list.php">Blog</a></li>
-                    <li><a href="enquire.php" class="cta grad-cta">Get a Demo</a></li>
+                    <li class="active"><a href="index.php">Home</a></li>
+                    <li><a href="inner-page.php">Platform</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Resources</a></li>
+                    <li><a href="/">Customer Stories</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/" class="cta grad-cta">Get a Demo</a></li>
                 </ul>
             </nav>
             <!-- END CONTENT -->

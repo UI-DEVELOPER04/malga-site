@@ -2,6 +2,12 @@
 
     .inner{
         header{
+            h2{  
+                padding-left:0px;  
+                &:before {
+                    display: none;
+                }
+            }
             p{
                 @include font-size(20px, 16px);
 

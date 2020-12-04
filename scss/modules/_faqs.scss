@@ -20,6 +20,10 @@
         header{
             h2{
                 color:$white; 
+                padding-left:0px;  
+                &:before {
+                    display: none;
+                }
             }
         }
 

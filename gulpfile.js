@@ -28,12 +28,16 @@ gulp.task("concatScripts", function(){
 		"scripts/vendor/_modernizr.3.6.0.custom-build.js",
 		"scripts/vendor/_bootstrap.bundle.min.js",
 		"scripts/vendor/_owl.carousel.min.v2.3.4.js",
+		"scripts/vendor/_flickity.min.js",
 		
 		"scripts/_partials/_cookie.js",
 		"scripts/_partials/_header.js",
-		"scripts/_partials/_layout.js",
-		"scripts/_partials/_feature-animate.js",
+		"scripts/_partials/_layout.js",		
 		"scripts/_partials/_collapse-list.js", 
+		"scripts/_partials/_multi-feature-list.js", 
+		"scripts/_partials/_feature-grid-slider.js", 
+		"scripts/_partials/_tabbed-feature-list.js", 
+		//"scripts/_partials/_feature-animate.js",
 		//"scripts/_partials/_slider.js", 
 	])
 	.pipe(concat("malga_gbl.js"))
